@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Postman.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <postmanDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *userNameField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
 @end
