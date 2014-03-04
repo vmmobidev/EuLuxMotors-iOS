@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EmployeeViewController : UIViewController
+@interface EmployeeViewController : UIViewController<UITableViewDataSource>
+
+@property (strong,nonatomic)NSMutableArray *arrayOfEmpNames;
+@property (strong,nonatomic)NSMutableArray *arrayOfEmpId;
 
 @end

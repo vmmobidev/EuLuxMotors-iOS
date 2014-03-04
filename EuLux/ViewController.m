@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "AFNetworking.h"
+//#import "AFNetworking.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *warningLabel;
@@ -86,6 +86,8 @@
        parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
               [self.activityindicator stopAnimating];
+              
+             // NSLog(@"%@",responseObject);
               NSData *responseData = [operation responseData];
               [self postRequestSuccessfulWithObject:responseData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
