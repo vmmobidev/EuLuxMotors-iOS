@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *warningLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityindicator;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLable;
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
 
 @end
 
@@ -41,6 +42,27 @@
     self.navigationController.navigationBarHidden = YES;
     
     postman = [[Postman alloc] init];
+    
+    
+    
+    self.userNameField.text = @"surajm@vmokshagroup.com";
+    self.passwordField.text = @"suraj";
+    
+//    NSMutableArray *namesArray =[NSMutableArray new];
+//
+//    for (int i = 1; i < 15; i++)
+//    {
+//        NSString *fileName = [NSString stringWithFormat:@"%i.png",i];
+//        UIImage *image = [UIImage imageNamed:fileName];
+//        [namesArray addObject:image];
+//    }
+//    
+//    self.testImageView.animationDuration = 2;
+//    self.testImageView.animationImages = namesArray;
+//    self.testImageView.animationRepeatCount = 100;
+//    
+//    [self.testImageView startAnimating];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,7 +87,8 @@
         [UIView animateWithDuration:.5 animations:^{
             self.userNameLable.alpha = 1.0f;
         } completion:^(BOOL finished) {
-            NSTimer *hideWarnigTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(hideuserNameLable:) userInfo:Nil repeats:NO];
+            NSTimer *hideWarnigTimer;
+            hideWarnigTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(hideuserNameLable:) userInfo:Nil repeats:NO];
         }];
     }
     
@@ -82,6 +105,7 @@
     NSDictionary *parameters = [NSJSONSerialization JSONObjectWithData:[stringJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:Nil];
 
     [self.activityindicator startAnimating];
+    self.signInButton.enabled = NO;
     [manager POST:@"http://ripple-io.in/Account/Authenticate"
        parameters:parameters
           success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -90,9 +114,13 @@
              // NSLog(@"%@",responseObject);
               NSData *responseData = [operation responseData];
               [self postRequestSuccessfulWithObject:responseData];
+              self.signInButton.enabled = YES;
+
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error : %@",error);
         [self.activityindicator stopAnimating];
+        self.signInButton.enabled = YES;
+
     }];
 //    NSString *stringJSON =[NSString stringWithFormat:@"{\"request\":{\"Username\":\"%@\",\"Password\":\"%@\"}}",self.userNameField.text,self.passwordField.text];
 //
@@ -158,11 +186,12 @@
     [UIView animateWithDuration:.5 animations:^{
         self.warningLabel.alpha = 1.0f;
     } completion:^(BOOL finished) {
-        NSTimer *hideWarnigTimer = [NSTimer scheduledTimerWithTimeInterval:1
-                                                                    target:self
-                                                                  selector:@selector(hideWarningLabel:)
-                                                                  userInfo:Nil
-                                                                   repeats:NO];
+        NSTimer *hideWarnigTimer;
+        hideWarnigTimer = [NSTimer scheduledTimerWithTimeInterval:1
+                                                           target:self
+                                                         selector:@selector(hideWarningLabel:)
+                                                         userInfo:Nil
+                                                          repeats:NO];
     }];
 }
 - (IBAction)hideKeyboard:(id)sender

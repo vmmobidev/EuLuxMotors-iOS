@@ -8,6 +8,7 @@
 
 #import "EmployeeViewController.h"
 #import "AFNetworking.h"
+#import "AnEmployeeViewController.h"
 
 
 @interface EmployeeViewController ()
@@ -46,8 +47,13 @@
     [requestSerializer  setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     manager.requestSerializer=requestSerializer;
-    NSString *stringJSON = @"{\"request\":{\"Name\":\"\",\"GenericSearchViewModel\":{\"Name\":\"\"}}}";
-    NSDictionary *parameters = [NSJSONSerialization JSONObjectWithData:[stringJSON dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:Nil];
+    
+    NSString *stringJSON = @"{\"request\":{\"Name\":\"\",\"GenericSearchViewModel\":{\"Name\":null}}}";
+
+//    NSLog(@"%@",stringJSON);
+    NSDictionary *parameters = [NSJSONSerialization JSONObjectWithData:[stringJSON dataUsingEncoding:NSUTF8StringEncoding]
+                                                               options:kNilOptions
+                                                                 error:Nil];
     
     [self.activityIndicator startAnimating];
     
@@ -67,7 +73,9 @@
 
 - (void)postRequestSuccessfulWithObject:(NSData *)responseData
 {
-    NSDictionary *jSONResponse = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:Nil];
+    NSDictionary *jSONResponse = [NSJSONSerialization JSONObjectWithData:responseData
+                                                                 options:kNilOptions
+                                                                   error:Nil];
     // NSLog(@"%@",jSONResponse);
     
     NSDictionary *aaDataDict = jSONResponse[@"aaData"];
@@ -76,7 +84,7 @@
         [self.arrayOfEmpNames addObject:employeeInfo[@"Name"]];
         [self.arrayOfEmpId addObject:employeeInfo[@"Id"]];
         }
-     NSLog(@"safdva   %i",[self.arrayOfEmpNames count]);
+     //NSLog(@"No of Emp   %li",[self.arrayOfEmpNames count]);
 }
 #pragma mark
 #pragma UITableViewDataSource Methods
@@ -103,17 +111,25 @@
 #pragma mark
 #pragma UITableViewDelegate Methods
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
-
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"anEmployeeSegue"])
+    {
+        NSIndexPath *indexPath = [self.tblView indexPathForSelectedRow];
+        AnEmployeeViewController *anEmployee = (AnEmployeeViewController *)segue.destinationViewController;
+        anEmployee.employeeID = self.arrayOfEmpId[indexPath.row];
+    }
 }
 
 @end

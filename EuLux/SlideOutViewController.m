@@ -8,6 +8,7 @@
 
 #import "SlideOutViewController.h"
 #import "SWRevealViewController.h"
+#import "AppDelegate.h"
 
 @interface SlideOutViewController ()
 
@@ -15,7 +16,7 @@
 
 @implementation SlideOutViewController
 {
-    NSArray *arrayOfComponents;
+    NSArray *arrayOfComponents, *arrayOfSegueID;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -31,6 +32,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.revealViewController.rightViewRevealWidth = 160;
+    [self.revealViewController tapGestureRecognizer];
+    arrayOfComponents = @[@"Order", @"Customer", @"Inventory", @"Contacts", @"Employee", @"Setting", @"Log Out"];
+    arrayOfSegueID = @[@"ordersListSegue",@"customersListSegue", @"inventoryListSegue",@"contactsListSegue", @"employeesListSegue", @"settingsSegue"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,34 +51,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 4;
+    return [arrayOfComponents count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    
-    switch ( indexPath.row )
-    {
-        case 0:
-            CellIdentifier = @"cell1";
-            break;
-            
-        case 1:
-            CellIdentifier = @"cell2";
-            break;
-            
-        case 2:
-            CellIdentifier = @"cell3";
-            break;
-            
-        case 3:
-            CellIdentifier = @"signout";
-            break;
-    }
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: CellIdentifier forIndexPath: indexPath];
     
+    UILabel *nameLable = (UILabel *)[cell viewWithTag:10];
+    nameLable.text = arrayOfComponents[indexPath.row];
     return cell;
 }
 
@@ -89,6 +76,20 @@
 //            nc.navigationBarHidden = NO;
             [swController setFrontViewController:dvc animated:YES];
         };
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.row < [arrayOfSegueID count])
+    {
+        [self performSegueWithIdentifier:arrayOfSegueID[indexPath.row] sender:self];
+    }else
+    {
+        AppDelegate *appDel = [UIApplication sharedApplication].delegate;
+        UINavigationController *nav =(UINavigationController *) appDel.window.rootViewController;
+        [nav popToRootViewControllerAnimated:NO];
     }
 }
 

@@ -34,4 +34,29 @@
           }];
 }
 
+- (void)get:(NSString *)URLString
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    
+    AFJSONRequestSerializer *requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    manager.requestSerializer = requestSerializer;
+    
+    [manager GET:URLString
+      parameters:Nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             
+             NSData *responseData = [operation responseData];
+             [self.delegate postman:self gotSuccess:responseData];
+             
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             
+             [self.delegate postman:self gotFailure:error];
+             NSLog(@"%@",error);
+             
+         }];
+}
+
 @end

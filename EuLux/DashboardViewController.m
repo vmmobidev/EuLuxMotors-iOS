@@ -8,6 +8,7 @@
 
 #import "SWRevealViewController.h"
 #import "DashboardViewController.h"
+#import <Crashlytics/Crashlytics.h>
 
 @interface DashboardViewController ()
 

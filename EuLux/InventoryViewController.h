@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface InventoryViewController : UIViewController
+@interface InventoryViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
