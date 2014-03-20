@@ -39,10 +39,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
-//    {
-//        self.automaticallyAdjustsScrollViewInsets = NO;
-//    }
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+    {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     [self.revealButtonItem setTarget: self.revealViewController];
     [self.revealButtonItem setAction: @selector( rightRevealToggle: )];
     
@@ -88,8 +88,7 @@
             dictionaryFromJOSN = [[NSDictionary alloc] init];
         }
         dictionaryFromJOSN = [NSJSONSerialization JSONObjectWithData:jsonResult options:kNilOptions error:Nil];
-        
-        
+
         [self respondToJSONResult:dictionaryFromJOSN];
     }
 }

@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Postman.h"
 
-@interface ContactsViewController : UIViewController
+@interface ContactsViewController : UIViewController <postmanDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @end

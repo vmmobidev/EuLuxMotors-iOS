@@ -9,6 +9,7 @@
 #import "SWRevealViewController.h"
 #import "DashboardViewController.h"
 #import <Crashlytics/Crashlytics.h>
+#import "WelcomeViewController.h"
 
 @interface DashboardViewController ()
 
@@ -44,5 +45,19 @@
 {
     SWRevealViewController *revealVC = (SWRevealViewController *)segue.destinationViewController;
     revealVC.tagOfSender = [sender tag];
+}
+- (IBAction)logOut:(UIButton *)sender
+{
+    UINavigationController *nav = self.navigationController;
+    
+    WelcomeViewController *welcome = (WelcomeViewController *)nav.viewControllers[0];
+    
+    welcome.logOut = YES;
+    
+    NSLog(@"Auto sign in status changed");
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:UserAutoSignInStatus];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [nav popToRootViewControllerAnimated:NO];
 }
 @end

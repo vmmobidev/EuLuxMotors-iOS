@@ -17,6 +17,10 @@
 		E4048B2C18D8282200028B15 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = E4048B2218D8282200028B15 /* AFURLResponseSerialization.m */; };
 		E4048B2D18D8282200028B15 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4048B2418D8282200028B15 /* AFURLSessionManager.m */; };
 		E409121518CDD1A600E87A04 /* InventoryObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E409121418CDD1A600E87A04 /* InventoryObject.m */; };
+		E40BF60B18D9682B006D72EF /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = E40BF60A18D9682B006D72EF /* Contact.m */; };
+		E40BF60E18D97018006D72EF /* ContactDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40BF60D18D97018006D72EF /* ContactDetailsViewController.m */; };
+		E40BF61218D9997B006D72EF /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40BF61118D9997B006D72EF /* WelcomeViewController.m */; };
+		E40BF61518D9C386006D72EF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = E40BF61418D9C386006D72EF /* Reachability.m */; };
 		E40F1E5918C05F4E00F7ECC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F1E5818C05F4E00F7ECC2 /* Foundation.framework */; };
 		E40F1E5B18C05F4E00F7ECC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F1E5A18C05F4E00F7ECC2 /* CoreGraphics.framework */; };
 		E40F1E5D18C05F4E00F7ECC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F1E5C18C05F4E00F7ECC2 /* UIKit.framework */; };
@@ -25,7 +29,7 @@
 		E40F1E6918C05F4E00F7ECC2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E40F1E6818C05F4E00F7ECC2 /* AppDelegate.m */; };
 		E40F1E6C18C05F4E00F7ECC2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40F1E6A18C05F4E00F7ECC2 /* Main_iPhone.storyboard */; };
 		E40F1E6F18C05F4E00F7ECC2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40F1E6D18C05F4E00F7ECC2 /* Main_iPad.storyboard */; };
-		E40F1E7218C05F4E00F7ECC2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40F1E7118C05F4E00F7ECC2 /* ViewController.m */; };
+		E40F1E7218C05F4E00F7ECC2 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40F1E7118C05F4E00F7ECC2 /* LoginViewController.m */; };
 		E40F1E7418C05F4E00F7ECC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E40F1E7318C05F4E00F7ECC2 /* Images.xcassets */; };
 		E40F1E7B18C05F4E00F7ECC2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F1E7A18C05F4E00F7ECC2 /* XCTest.framework */; };
 		E40F1E7C18C05F4E00F7ECC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F1E5818C05F4E00F7ECC2 /* Foundation.framework */; };
@@ -36,13 +40,16 @@
 		E40F1EB018C060AA00F7ECC2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F1EAF18C060AA00F7ECC2 /* SystemConfiguration.framework */; };
 		E40F1EB218C0899100F7ECC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F1EB118C0899100F7ECC2 /* QuartzCore.framework */; };
 		E40F1EB518C0934300F7ECC2 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40F1EB418C0934300F7ECC2 /* OrdersViewController.m */; };
-		E40F1EBB18C0B4BD00F7ECC2 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = E40F1EBA18C0B4BD00F7ECC2 /* Background.png */; };
-		E40F1EBD18C0B52A00F7ECC2 /* Background1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E40F1EBC18C0B52A00F7ECC2 /* Background1.jpg */; };
 		E474F8BE18D2D5A8001DF1E4 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E474F8BD18D2D5A8001DF1E4 /* Crashlytics.framework */; };
 		E47D0BEB18CECB9B0030CD38 /* InventoryItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47D0BEA18CECB9B0030CD38 /* InventoryItemViewController.m */; };
 		E47D0BEE18CF00100030CD38 /* AnEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47D0BED18CF00100030CD38 /* AnEmployeeViewController.m */; };
+		E48FA56018DAD2B1005B816F /* Default1.png in Resources */ = {isa = PBXBuildFile; fileRef = E48FA55F18DAD2B1005B816F /* Default1.png */; };
+		E48FA56218DAD2B7005B816F /* circle_big.png in Resources */ = {isa = PBXBuildFile; fileRef = E48FA56118DAD2B7005B816F /* circle_big.png */; };
 		E499D44A18D70CB800BB1A22 /* Customer.m in Sources */ = {isa = PBXBuildFile; fileRef = E499D44918D70CB800BB1A22 /* Customer.m */; };
 		E499D44D18D7189C00BB1A22 /* CustomerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E499D44C18D7189C00BB1A22 /* CustomerDetailsViewController.m */; };
+		E49B1E1218DAEDE300130EC9 /* backGround1.png in Resources */ = {isa = PBXBuildFile; fileRef = E49B1E1118DAEDE300130EC9 /* backGround1.png */; };
+		E49B1E1618DB092200130EC9 /* Animator.m in Sources */ = {isa = PBXBuildFile; fileRef = E49B1E1518DB092200130EC9 /* Animator.m */; };
+		E49B1E1918DB0A4200130EC9 /* NavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E49B1E1818DB0A4200130EC9 /* NavigationControllerDelegate.m */; };
 		E4B2A42818C449910073F810 /* Postman.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B2A42718C449910073F810 /* Postman.m */; };
 		E4B2A42C18C469EA0073F810 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4B2A42B18C469EA0073F810 /* SWRevealViewController.m */; };
 		E4B2A42E18C477B70073F810 /* reveal-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E4B2A42D18C477B70073F810 /* reveal-icon@2x.png */; };
@@ -87,6 +94,15 @@
 		E4048B2418D8282200028B15 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		E409121318CDD1A600E87A04 /* InventoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryObject.h; sourceTree = "<group>"; };
 		E409121418CDD1A600E87A04 /* InventoryObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryObject.m; sourceTree = "<group>"; };
+		E40BF60918D9682B006D72EF /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		E40BF60A18D9682B006D72EF /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		E40BF60C18D97018006D72EF /* ContactDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactDetailsViewController.h; sourceTree = "<group>"; };
+		E40BF60D18D97018006D72EF /* ContactDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactDetailsViewController.m; sourceTree = "<group>"; };
+		E40BF60F18D97FBA006D72EF /* const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = const.h; sourceTree = "<group>"; };
+		E40BF61018D9997B006D72EF /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		E40BF61118D9997B006D72EF /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		E40BF61318D9C386006D72EF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		E40BF61418D9C386006D72EF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		E40F1E5518C05F4E00F7ECC2 /* EuLux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EuLux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40F1E5818C05F4E00F7ECC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		E40F1E5A18C05F4E00F7ECC2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -99,8 +115,8 @@
 		E40F1E6818C05F4E00F7ECC2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E40F1E6B18C05F4E00F7ECC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		E40F1E6E18C05F4E00F7ECC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		E40F1E7018C05F4E00F7ECC2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E40F1E7118C05F4E00F7ECC2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E40F1E7018C05F4E00F7ECC2 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E40F1E7118C05F4E00F7ECC2 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		E40F1E7318C05F4E00F7ECC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E40F1E7918C05F4E00F7ECC2 /* EuLuxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EuLuxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40F1E7A18C05F4E00F7ECC2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -112,17 +128,22 @@
 		E40F1EB118C0899100F7ECC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E40F1EB318C0934300F7ECC2 /* OrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
 		E40F1EB418C0934300F7ECC2 /* OrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
-		E40F1EBA18C0B4BD00F7ECC2 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
-		E40F1EBC18C0B52A00F7ECC2 /* Background1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background1.jpg; sourceTree = "<group>"; };
 		E474F8BD18D2D5A8001DF1E4 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		E47D0BE918CECB9B0030CD38 /* InventoryItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryItemViewController.h; sourceTree = "<group>"; };
 		E47D0BEA18CECB9B0030CD38 /* InventoryItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryItemViewController.m; sourceTree = "<group>"; };
 		E47D0BEC18CF00100030CD38 /* AnEmployeeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnEmployeeViewController.h; sourceTree = "<group>"; };
 		E47D0BED18CF00100030CD38 /* AnEmployeeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnEmployeeViewController.m; sourceTree = "<group>"; };
+		E48FA55F18DAD2B1005B816F /* Default1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default1.png; sourceTree = "<group>"; };
+		E48FA56118DAD2B7005B816F /* circle_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle_big.png; sourceTree = "<group>"; };
 		E499D44818D70CB800BB1A22 /* Customer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Customer.h; sourceTree = "<group>"; };
 		E499D44918D70CB800BB1A22 /* Customer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Customer.m; sourceTree = "<group>"; };
 		E499D44B18D7189C00BB1A22 /* CustomerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerDetailsViewController.h; sourceTree = "<group>"; };
 		E499D44C18D7189C00BB1A22 /* CustomerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerDetailsViewController.m; sourceTree = "<group>"; };
+		E49B1E1118DAEDE300130EC9 /* backGround1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backGround1.png; sourceTree = "<group>"; };
+		E49B1E1418DB092200130EC9 /* Animator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animator.h; sourceTree = "<group>"; };
+		E49B1E1518DB092200130EC9 /* Animator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animator.m; sourceTree = "<group>"; };
+		E49B1E1718DB0A4200130EC9 /* NavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationControllerDelegate.h; sourceTree = "<group>"; };
+		E49B1E1818DB0A4200130EC9 /* NavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationControllerDelegate.m; sourceTree = "<group>"; };
 		E4B2A42618C449910073F810 /* Postman.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Postman.h; sourceTree = "<group>"; };
 		E4B2A42718C449910073F810 /* Postman.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Postman.m; sourceTree = "<group>"; };
 		E4B2A42A18C469EA0073F810 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -203,8 +224,18 @@
 			children = (
 				E4B2A42618C449910073F810 /* Postman.h */,
 				E4B2A42718C449910073F810 /* Postman.m */,
+				E40BF60F18D97FBA006D72EF /* const.h */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		E40BF61618D9C38E006D72EF /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				E40BF61318D9C386006D72EF /* Reachability.h */,
+				E40BF61418D9C386006D72EF /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 		E40F1E4C18C05F4E00F7ECC2 = {
@@ -244,16 +275,22 @@
 		E40F1E5E18C05F4E00F7ECC2 /* EuLux */ = {
 			isa = PBXGroup;
 			children = (
+				E48FA55F18DAD2B1005B816F /* Default1.png */,
+				E49B1E1118DAEDE300130EC9 /* backGround1.png */,
+				E48FA56118DAD2B7005B816F /* circle_big.png */,
 				E40F1E6718C05F4E00F7ECC2 /* AppDelegate.h */,
 				E40F1E6818C05F4E00F7ECC2 /* AppDelegate.m */,
 				E40F1E6A18C05F4E00F7ECC2 /* Main_iPhone.storyboard */,
 				E40F1E6D18C05F4E00F7ECC2 /* Main_iPad.storyboard */,
-				E40F1E7018C05F4E00F7ECC2 /* ViewController.h */,
-				E40F1E7118C05F4E00F7ECC2 /* ViewController.m */,
+				E40BF61018D9997B006D72EF /* WelcomeViewController.h */,
+				E40BF61118D9997B006D72EF /* WelcomeViewController.m */,
+				E40F1E7018C05F4E00F7ECC2 /* LoginViewController.h */,
+				E40F1E7118C05F4E00F7ECC2 /* LoginViewController.m */,
 				E4B2A43218C49DF20073F810 /* DashboardViewController.h */,
 				E4B2A43318C49DF20073F810 /* DashboardViewController.m */,
 				E4B2A42F18C47D300073F810 /* SlideOutViewController.h */,
 				E4B2A43018C47D300073F810 /* SlideOutViewController.m */,
+				E49B1E1318DB090700130EC9 /* NavigatonTransition */,
 				E4DE136418D08EC000426DFA /* Order */,
 				E4DE136018D08B6C00426DFA /* Employee */,
 				E4DE135F18D08B5A00426DFA /* Inventory */,
@@ -261,11 +298,10 @@
 				E4DE136218D08BBB00426DFA /* Setting */,
 				E4DE136318D08BCC00426DFA /* Customer */,
 				E409121218CDD17A00E87A04 /* Model */,
-				E40F1EBA18C0B4BD00F7ECC2 /* Background.png */,
-				E40F1EBC18C0B52A00F7ECC2 /* Background1.jpg */,
 				E4B2A42D18C477B70073F810 /* reveal-icon@2x.png */,
 				E40F1E7318C05F4E00F7ECC2 /* Images.xcassets */,
 				E4048B1118D8282200028B15 /* AFNetworking */,
+				E40BF61618D9C38E006D72EF /* Reachability */,
 				E4B2A42918C469EA0073F810 /* SWRevealViewController */,
 				E40F1E5F18C05F4E00F7ECC2 /* Supporting Files */,
 			);
@@ -299,6 +335,17 @@
 				E40F1E8318C05F4E00F7ECC2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E49B1E1318DB090700130EC9 /* NavigatonTransition */ = {
+			isa = PBXGroup;
+			children = (
+				E49B1E1718DB0A4200130EC9 /* NavigationControllerDelegate.h */,
+				E49B1E1818DB0A4200130EC9 /* NavigationControllerDelegate.m */,
+				E49B1E1418DB092200130EC9 /* Animator.h */,
+				E49B1E1518DB092200130EC9 /* Animator.m */,
+			);
+			name = NavigatonTransition;
 			sourceTree = "<group>";
 		};
 		E4B2A42918C469EA0073F810 /* SWRevealViewController */ = {
@@ -339,6 +386,10 @@
 			children = (
 				E4DE135518D079DD00426DFA /* ContactsViewController.h */,
 				E4DE135618D079DD00426DFA /* ContactsViewController.m */,
+				E40BF60C18D97018006D72EF /* ContactDetailsViewController.h */,
+				E40BF60D18D97018006D72EF /* ContactDetailsViewController.m */,
+				E40BF60918D9682B006D72EF /* Contact.h */,
+				E40BF60A18D9682B006D72EF /* Contact.m */,
 			);
 			name = Contacts;
 			sourceTree = "<group>";
@@ -452,12 +503,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E40F1E6F18C05F4E00F7ECC2 /* Main_iPad.storyboard in Resources */,
+				E49B1E1218DAEDE300130EC9 /* backGround1.png in Resources */,
 				E40F1E7418C05F4E00F7ECC2 /* Images.xcassets in Resources */,
 				E4B2A42E18C477B70073F810 /* reveal-icon@2x.png in Resources */,
-				E40F1EBB18C0B4BD00F7ECC2 /* Background.png in Resources */,
-				E40F1EBD18C0B52A00F7ECC2 /* Background1.jpg in Resources */,
 				E40F1E6C18C05F4E00F7ECC2 /* Main_iPhone.storyboard in Resources */,
 				E40F1E6318C05F4E00F7ECC2 /* InfoPlist.strings in Resources */,
+				E48FA56218DAD2B7005B816F /* circle_big.png in Resources */,
+				E48FA56018DAD2B1005B816F /* Default1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,19 +545,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49B1E1618DB092200130EC9 /* Animator.m in Sources */,
 				E499D44A18D70CB800BB1A22 /* Customer.m in Sources */,
 				E4DE135718D079DD00426DFA /* ContactsViewController.m in Sources */,
 				E4048B2918D8282200028B15 /* AFSecurityPolicy.m in Sources */,
 				E4048B2618D8282200028B15 /* AFHTTPRequestOperationManager.m in Sources */,
+				E40BF60B18D9682B006D72EF /* Contact.m in Sources */,
+				E40BF61218D9997B006D72EF /* WelcomeViewController.m in Sources */,
 				E4048B2518D8282200028B15 /* AFHTTPRequestOperation.m in Sources */,
 				E40F1EB518C0934300F7ECC2 /* OrdersViewController.m in Sources */,
 				E4B2A43718C49E3D0073F810 /* EmployeeViewController.m in Sources */,
+				E40BF60E18D97018006D72EF /* ContactDetailsViewController.m in Sources */,
+				E49B1E1918DB0A4200130EC9 /* NavigationControllerDelegate.m in Sources */,
 				E4B2A43418C49DF20073F810 /* DashboardViewController.m in Sources */,
+				E40BF61518D9C386006D72EF /* Reachability.m in Sources */,
 				E4B2A42C18C469EA0073F810 /* SWRevealViewController.m in Sources */,
 				E47D0BEB18CECB9B0030CD38 /* InventoryItemViewController.m in Sources */,
 				E409121518CDD1A600E87A04 /* InventoryObject.m in Sources */,
 				E47D0BEE18CF00100030CD38 /* AnEmployeeViewController.m in Sources */,
-				E40F1E7218C05F4E00F7ECC2 /* ViewController.m in Sources */,
+				E40F1E7218C05F4E00F7ECC2 /* LoginViewController.m in Sources */,
 				E4048B2718D8282200028B15 /* AFHTTPSessionManager.m in Sources */,
 				E4B2A42818C449910073F810 /* Postman.m in Sources */,
 				E4B2A43D18C49E720073F810 /* InventoryViewController.m in Sources */,

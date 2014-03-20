@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Reachability.h"
 #import <Crashlytics/Crashlytics.h>
 
 @implementation AppDelegate
@@ -14,6 +15,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    Reachability *reachability = [Reachability reachabilityWithHostname:@"www.google.com"];
+    [reachability startNotifier];
+    
     [Crashlytics startWithAPIKey:@"4023a602bfc3446febce487f228a070fd77028b6"];
     return YES;
 }

@@ -8,6 +8,7 @@
 
 #import "SlideOutViewController.h"
 #import "SWRevealViewController.h"
+#import "WelcomeViewController.h"
 #import "AppDelegate.h"
 
 @interface SlideOutViewController ()
@@ -89,6 +90,15 @@
     {
         AppDelegate *appDel = [UIApplication sharedApplication].delegate;
         UINavigationController *nav =(UINavigationController *) appDel.window.rootViewController;
+        
+        WelcomeViewController *welcome = (WelcomeViewController *)nav.viewControllers[0];
+        
+        welcome.logOut = YES;
+        
+        NSLog(@"Auto sign in status changed");
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:UserAutoSignInStatus];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
         [nav popToRootViewControllerAnimated:NO];
     }
 }

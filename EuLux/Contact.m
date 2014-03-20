@@ -1,14 +1,14 @@
 //
-//  User.m
+//  Contact.m
 //  EuLux
 //
-//  Created by Varghese Simon on 3/17/14.
+//  Created by Varghese Simon on 3/19/14.
 //  Copyright (c) 2014 Vmoksha. All rights reserved.
 //
 
-#import "Customer.h"
+#import "Contact.h"
 
-@implementation Customer
+@implementation Contact
 
 - (void)setWebsite:(NSString *)website
 {

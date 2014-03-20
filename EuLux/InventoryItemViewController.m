@@ -92,7 +92,7 @@
     {
         URLString = [NSString stringWithFormat:@"http://%@",URLString];
     }
-    
+
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:URLString]];
 }
 

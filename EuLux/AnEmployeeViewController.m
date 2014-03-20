@@ -62,10 +62,10 @@
              NSLog(@"Failure");
          }];
     
-//    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
-//    {
-//        self.automaticallyAdjustsScrollViewInsets = NO;
-//    }
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))
+    {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
     
     
     self.tableView.layer.borderWidth = 2.0;
