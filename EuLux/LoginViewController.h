@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Postman.h"
 
-@interface LoginViewController : UIViewController <postmanDelegate>
+@interface LoginViewController : UIViewController <postmanDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *userNameField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
-@property (weak, nonatomic) IBOutlet UIImageView *testImageView;
 
 @end

@@ -47,6 +47,14 @@
     animationCompleted = NO;
     logInCompleted = NO;
     
+//    for (NSString *family in [UIFont familyNames])
+//    {
+//        for (NSString *names in [UIFont fontNamesForFamilyName:family])
+//        {
+//            NSLog(@"%@ %@", family, names);
+//        }
+//    }
+    
     self.rippleImage.transform = CGAffineTransformMakeTranslation(0, 100);
 
     [self animateRipple];
@@ -251,18 +259,9 @@
 
 - (void)animationsBeforeNavigation
 {
-//    CGRect frameOfRipple = self.rippleImage.frame;
-//    frameOfRipple.origin.x = -300;
-//    self.rippleImage.frame = frameOfRipple;
-//    
-//    
-//    CGFloat distanceToMove = 200 + self.view.frame.size.width/2 - self.rippleImage.frame.size.width/2;
-//    self.rippleImage.transform = CGAffineTransformMakeTranslation(distanceToMove, 0);
-
-    
     [UIView animateWithDuration:.5 delay:0 options:(UIViewAnimationOptionCurveEaseIn) animations:^{
 //        self.rippleImage.transform = CGAffineTransformIdentity;
-        self.rippleVrtCentrConst.constant = 200 + self.view.frame.size.width/2 - self.rippleImage.frame.size.width/2;
+        self.rippleVrtCentrConst.constant =  self.view.frame.size.width/2 + self.rippleImage.frame.size.width/2;
         [self.rippleImage layoutIfNeeded];
         self.vmokshaBottomConst.constant = -60;
         [self.view layoutIfNeeded];

@@ -31,17 +31,26 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib
     
-    self.userNameField.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.userNameField.layer.shadowOffset = CGSizeMake(0, 0);
-    self.userNameField.layer.shadowOpacity = .2f;
-    self.userNameField.layer.shadowRadius = 5.0f;
-    self.userNameField.layer.masksToBounds = NO;
+//    UIImage *resizeableButtonBorder = [[UIImage imageNamed:@"buttonBorder.png"] resizableImageWithCapInsets:(UIEdgeInsetsMake(25, 25, 25, 25))];
+//    [self.signInButton setBackgroundImage:resizeableButtonBorder forState:(UIControlStateNormal)];
     
-    self.passwordField.layer.shadowColor = [UIColor blackColor].CGColor;
-    self.passwordField.layer.shadowOffset = CGSizeMake(0, 0);
-    self.passwordField.layer.shadowOpacity = .2f;
-    self.passwordField.layer.shadowRadius = 5.0f;
-    self.passwordField.layer.masksToBounds = NO;
+    self.userNameContainer.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.userNameContainer.layer.shadowOffset = CGSizeMake(0, 0);
+    self.userNameContainer.layer.shadowOpacity = .5f;
+    self.userNameContainer.layer.shadowRadius = 5.0f;
+    self.userNameContainer.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.userNameContainer.bounds].CGPath;
+    self.userNameContainer.layer.shouldRasterize = YES;
+    self.userNameContainer.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    self.userNameContainer.layer.masksToBounds = NO;
+    
+    self.passwordContainer.layer.shadowColor = [UIColor blackColor].CGColor;
+    self.passwordContainer.layer.shadowOffset = CGSizeMake(0, 0);
+    self.passwordContainer.layer.shadowOpacity = .5f;
+    self.passwordContainer.layer.shadowRadius = 5.0f;
+    self.passwordContainer.layer.shadowPath = [UIBezierPath bezierPathWithRect:self.passwordContainer.bounds].CGPath;
+    self.passwordContainer.layer.shouldRasterize = YES;
+    self.passwordContainer.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    self.passwordContainer.layer.masksToBounds = NO;
     
     self.navigationController.navigationBarHidden = YES;
     
@@ -56,6 +65,9 @@
 {
     [super viewWillAppear:animated];
     [self animateSubviews];
+    self.userNameContainer.translatesAutoresizingMaskIntoConstraints = NO;
+    self.passwordContainer.translatesAutoresizingMaskIntoConstraints = NO;
+    self.signInButton.translatesAutoresizingMaskIntoConstraints = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,6 +84,7 @@
 
 - (IBAction)signIn:(id)sender
 {
+    [self hideKeyboard:nil];
     if ((self.userNameField.text.length && self.passwordField.text.length) == 0)
     {
         self.userNameLable.alpha = 0.0f;
@@ -132,6 +145,7 @@
     }
 
 }
+
 - (void)hideWarningLabel:(NSTimer *)timer
 {
     [UIView animateWithDuration:.5
@@ -142,6 +156,7 @@
                          self.warningLabel.hidden = YES;
                      }];
 }
+
 - (void)hideuserNameLable:(NSTimer *)timer
 {
     [UIView animateWithDuration:.5
@@ -175,9 +190,9 @@
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
     
-    [self hideKeyboard:Nil];
-    self.passwordField.text = @"";
-    [self performSegueWithIdentifier:@"signInSuccessful" sender:@"SignIn"];
+//    [self hideKeyboard:Nil];
+//    self.passwordField.text = @"";
+    [self animateLogingIn];
 
 }
 
@@ -209,43 +224,6 @@
     return NO;
 }
 
-
-
-//- (void)checkForAutoLogIn
-//{
-//    BOOL autoSignIn = [[NSUserDefaults standardUserDefaults] boolForKey:UserAutoSignInStatus];
-//    
-//    if (autoSignIn)
-//    {
-//        [self signInAutomatically];
-//    } else
-//    {
-//        NSLog(@"Manual");
-//    }
-//}
-//
-//- (void)signInAutomatically
-//{
-//    NSString *userName =[[NSUserDefaults standardUserDefaults] objectForKey:kCurrentUserName];
-//    NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:kCurrentPassowrd];
-//    
-//    self.userNameField.text = userName;
-//    self.passwordField.text = password;
-//    
-//    shouldSave = NO;
-//    
-//    [self.activityindicator startAnimating];
-//    self.signInButton.enabled = NO;
-//    
-//    NSString *stringJSON =[NSString stringWithFormat:@"{\"request\":{\"Username\":\"%@\",\"Password\":\"%@\"}}",userName,password];
-//    
-//    postman = [[Postman alloc] init];
-//    postman.delegate = self;
-//    [postman post:@"http://ripple-io.in/Account/Authenticate" withParameters:stringJSON];
-//    
-//    NSLog(@"Automatic");
-//}
-
 - (void)animateSubviews
 {
     CGAffineTransform transform = CGAffineTransformIdentity;
@@ -256,7 +234,6 @@
     [UIView animateWithDuration:1 delay:0 options:(UIViewAnimationOptionCurveEaseOut) animations:^{
         self.userNameContainer.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
-        
     }];
     
     [UIView animateWithDuration:1 delay:0.5 options:(UIViewAnimationOptionCurveEaseOut) animations:^{
@@ -264,6 +241,45 @@
         self.signInButton.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         
+    }];
+    
+    
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    textField.textAlignment = NSTextAlignmentLeft;
+    textField.placeholder = @"";
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    
+    textField.textAlignment = NSTextAlignmentCenter;
+    if (textField.tag == 10)
+    {
+        textField.placeholder = @"User Name";
+    }else if (textField.tag == 11)
+    {
+        textField.placeholder = @"Password";
+    }
+}
+
+- (void)animateLogingIn
+{
+    self.userNameContainer.translatesAutoresizingMaskIntoConstraints = YES;
+    self.passwordContainer.translatesAutoresizingMaskIntoConstraints = YES;
+    self.signInButton.translatesAutoresizingMaskIntoConstraints = YES;
+    
+    [UIView animateWithDuration:.5 delay:0 options:(UIViewAnimationOptionCurveEaseIn) animations:^{
+        self.userNameContainer.transform = CGAffineTransformMakeTranslation(self.userNameContainer.frame.size.width, 0);
+    } completion:^(BOOL finished) {
+        
+    }];
+    
+    [UIView animateWithDuration:.5 delay:.25 options:(UIViewAnimationOptionCurveEaseIn) animations:^{
+        self.passwordContainer.transform = CGAffineTransformMakeTranslation(self.passwordContainer.frame.size.width, 0);
+        self.signInButton.transform = CGAffineTransformMakeTranslation(0, self.view.frame.size.height*3/4);
+    } completion:^(BOOL finished) {
+        [self performSegueWithIdentifier:@"signInSuccessful" sender:@"SignIn"];
     }];
 }
 

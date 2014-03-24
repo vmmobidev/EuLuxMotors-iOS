@@ -40,6 +40,14 @@
 		E40F1EB018C060AA00F7ECC2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F1EAF18C060AA00F7ECC2 /* SystemConfiguration.framework */; };
 		E40F1EB218C0899100F7ECC2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E40F1EB118C0899100F7ECC2 /* QuartzCore.framework */; };
 		E40F1EB518C0934300F7ECC2 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E40F1EB418C0934300F7ECC2 /* OrdersViewController.m */; };
+		E411C18418DC0427001FC397 /* buttonBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = E411C18318DC0427001FC397 /* buttonBorder.png */; };
+		E470134418E0069200560F9F /* Contacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E470133F18E0069200560F9F /* Contacts@2x.png */; };
+		E470134518E0069200560F9F /* Employee@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E470134018E0069200560F9F /* Employee@2x.png */; };
+		E470134618E0069200560F9F /* Inventory@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E470134118E0069200560F9F /* Inventory@2x.png */; };
+		E470134718E0069200560F9F /* Order@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E470134218E0069200560F9F /* Order@2x.png */; };
+		E470134818E0069200560F9F /* Setting@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E470134318E0069200560F9F /* Setting@2x.png */; };
+		E470134A18E00A2700560F9F /* Customers@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E470134918E00A2700560F9F /* Customers@2x.png */; };
+		E470134C18E01D5600560F9F /* Logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E470134B18E01D5600560F9F /* Logout@2x.png */; };
 		E474F8BE18D2D5A8001DF1E4 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E474F8BD18D2D5A8001DF1E4 /* Crashlytics.framework */; };
 		E47D0BEB18CECB9B0030CD38 /* InventoryItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47D0BEA18CECB9B0030CD38 /* InventoryItemViewController.m */; };
 		E47D0BEE18CF00100030CD38 /* AnEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E47D0BED18CF00100030CD38 /* AnEmployeeViewController.m */; };
@@ -128,6 +136,14 @@
 		E40F1EB118C0899100F7ECC2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E40F1EB318C0934300F7ECC2 /* OrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
 		E40F1EB418C0934300F7ECC2 /* OrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
+		E411C18318DC0427001FC397 /* buttonBorder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBorder.png; sourceTree = "<group>"; };
+		E470133F18E0069200560F9F /* Contacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contacts@2x.png"; sourceTree = "<group>"; };
+		E470134018E0069200560F9F /* Employee@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Employee@2x.png"; sourceTree = "<group>"; };
+		E470134118E0069200560F9F /* Inventory@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Inventory@2x.png"; sourceTree = "<group>"; };
+		E470134218E0069200560F9F /* Order@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Order@2x.png"; sourceTree = "<group>"; };
+		E470134318E0069200560F9F /* Setting@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Setting@2x.png"; sourceTree = "<group>"; };
+		E470134918E00A2700560F9F /* Customers@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Customers@2x.png"; sourceTree = "<group>"; };
+		E470134B18E01D5600560F9F /* Logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logout@2x.png"; sourceTree = "<group>"; };
 		E474F8BD18D2D5A8001DF1E4 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		E47D0BE918CECB9B0030CD38 /* InventoryItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryItemViewController.h; sourceTree = "<group>"; };
 		E47D0BEA18CECB9B0030CD38 /* InventoryItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryItemViewController.m; sourceTree = "<group>"; };
@@ -224,7 +240,6 @@
 			children = (
 				E4B2A42618C449910073F810 /* Postman.h */,
 				E4B2A42718C449910073F810 /* Postman.m */,
-				E40BF60F18D97FBA006D72EF /* const.h */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -277,6 +292,7 @@
 			children = (
 				E48FA55F18DAD2B1005B816F /* Default1.png */,
 				E49B1E1118DAEDE300130EC9 /* backGround1.png */,
+				E411C18318DC0427001FC397 /* buttonBorder.png */,
 				E48FA56118DAD2B7005B816F /* circle_big.png */,
 				E40F1E6718C05F4E00F7ECC2 /* AppDelegate.h */,
 				E40F1E6818C05F4E00F7ECC2 /* AppDelegate.m */,
@@ -286,8 +302,7 @@
 				E40BF61118D9997B006D72EF /* WelcomeViewController.m */,
 				E40F1E7018C05F4E00F7ECC2 /* LoginViewController.h */,
 				E40F1E7118C05F4E00F7ECC2 /* LoginViewController.m */,
-				E4B2A43218C49DF20073F810 /* DashboardViewController.h */,
-				E4B2A43318C49DF20073F810 /* DashboardViewController.m */,
+				E470134D18E02ED000560F9F /* Dash board */,
 				E4B2A42F18C47D300073F810 /* SlideOutViewController.h */,
 				E4B2A43018C47D300073F810 /* SlideOutViewController.m */,
 				E49B1E1318DB090700130EC9 /* NavigatonTransition */,
@@ -299,6 +314,7 @@
 				E4DE136318D08BCC00426DFA /* Customer */,
 				E409121218CDD17A00E87A04 /* Model */,
 				E4B2A42D18C477B70073F810 /* reveal-icon@2x.png */,
+				E40BF60F18D97FBA006D72EF /* const.h */,
 				E40F1E7318C05F4E00F7ECC2 /* Images.xcassets */,
 				E4048B1118D8282200028B15 /* AFNetworking */,
 				E40BF61618D9C38E006D72EF /* Reachability */,
@@ -335,6 +351,30 @@
 				E40F1E8318C05F4E00F7ECC2 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E470134D18E02ED000560F9F /* Dash board */ = {
+			isa = PBXGroup;
+			children = (
+				E470134E18E02FA800560F9F /* Images */,
+				E4B2A43218C49DF20073F810 /* DashboardViewController.h */,
+				E4B2A43318C49DF20073F810 /* DashboardViewController.m */,
+			);
+			name = "Dash board";
+			sourceTree = "<group>";
+		};
+		E470134E18E02FA800560F9F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E470134B18E01D5600560F9F /* Logout@2x.png */,
+				E470133F18E0069200560F9F /* Contacts@2x.png */,
+				E470134018E0069200560F9F /* Employee@2x.png */,
+				E470134118E0069200560F9F /* Inventory@2x.png */,
+				E470134218E0069200560F9F /* Order@2x.png */,
+				E470134918E00A2700560F9F /* Customers@2x.png */,
+				E470134318E0069200560F9F /* Setting@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		E49B1E1318DB090700130EC9 /* NavigatonTransition */ = {
@@ -504,11 +544,19 @@
 			files = (
 				E40F1E6F18C05F4E00F7ECC2 /* Main_iPad.storyboard in Resources */,
 				E49B1E1218DAEDE300130EC9 /* backGround1.png in Resources */,
+				E470134A18E00A2700560F9F /* Customers@2x.png in Resources */,
 				E40F1E7418C05F4E00F7ECC2 /* Images.xcassets in Resources */,
+				E470134C18E01D5600560F9F /* Logout@2x.png in Resources */,
+				E470134418E0069200560F9F /* Contacts@2x.png in Resources */,
+				E470134518E0069200560F9F /* Employee@2x.png in Resources */,
+				E470134618E0069200560F9F /* Inventory@2x.png in Resources */,
 				E4B2A42E18C477B70073F810 /* reveal-icon@2x.png in Resources */,
+				E470134718E0069200560F9F /* Order@2x.png in Resources */,
+				E470134818E0069200560F9F /* Setting@2x.png in Resources */,
 				E40F1E6C18C05F4E00F7ECC2 /* Main_iPhone.storyboard in Resources */,
 				E40F1E6318C05F4E00F7ECC2 /* InfoPlist.strings in Resources */,
 				E48FA56218DAD2B7005B816F /* circle_big.png in Resources */,
+				E411C18418DC0427001FC397 /* buttonBorder.png in Resources */,
 				E48FA56018DAD2B1005B816F /* Default1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +770,7 @@
 				INFOPLIST_FILE = "EuLux/EuLux-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -741,6 +790,7 @@
 				INFOPLIST_FILE = "EuLux/EuLux-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
