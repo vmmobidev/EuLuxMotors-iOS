@@ -7,8 +7,9 @@
 //
 
 #import "SWRevealViewController.h"
+#import "Postman.h"
 #import <UIKit/UIKit.h>
 
-@interface OrdersViewController : UIViewController
+@interface OrdersViewController : UIViewController <postmanDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @end

@@ -141,9 +141,7 @@
     {
         NSLog(@"Authentication failed");
         [self failedAuthentication];
-
     }
-
 }
 
 - (void)hideWarningLabel:(NSTimer *)timer

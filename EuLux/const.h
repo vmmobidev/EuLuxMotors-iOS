@@ -23,4 +23,8 @@
 #define kCurrentUserName @"currentUserName"
 #define kCurrentPassowrd @"currentPassword"
 
+
+
+#define CheckWhetherArrayIsEmpty(array) ([array count] > 0)
+
 #endif

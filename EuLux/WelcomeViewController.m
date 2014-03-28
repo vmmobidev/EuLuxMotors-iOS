@@ -47,13 +47,15 @@
     animationCompleted = NO;
     logInCompleted = NO;
     
-//    for (NSString *family in [UIFont familyNames])
-//    {
-//        for (NSString *names in [UIFont fontNamesForFamilyName:family])
-//        {
-//            NSLog(@"%@ %@", family, names);
-//        }
-//    }
+    for (NSString *family in [UIFont familyNames])
+    {
+        for (NSString *names in [UIFont fontNamesForFamilyName:family])
+        {
+            NSLog(@"%@ %@", family, names);
+        }
+    }
+    
+    
     
     self.rippleImage.transform = CGAffineTransformMakeTranslation(0, 100);
 
